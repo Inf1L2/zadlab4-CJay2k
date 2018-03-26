@@ -15,20 +15,21 @@ public class Tab {
     public int nr_indeksu;
     public String nazwa_specjalnosci;
     public String rok_studiow;
+    public int indeks_tablicy;
     
     String[][] student = new String[100][5];
     
-        public void wypelnijTablice(){
-            for(int i = 0; i<100; i++){
-                for(int j = 0; j<5; j++){
-                    if(j==2){
-                        student[i][j]="0";
-                    }
-                    else{
-                        student[i][j]="";
-                    }
+    public void wypelnijTablice(){
+        for(int i = 0; i<100; i++){
+            for(int j = 0; j<5; j++){
+                if(j==2){
+                    student[i][j]="0";
+                }
+                else{
+                    student[i][j]="";
                 }
             }
+        }
     }
 
     public Tab(String imie, String nazwisko, int nr_indeksu, String nazwa_specjalnosci, String rok_studiow) {
@@ -38,13 +39,17 @@ public class Tab {
         this.nazwa_specjalnosci = nazwa_specjalnosci;
         this.rok_studiow = rok_studiow;
     }
+
+    public Tab(int indeks_tablicy) {
+        this.indeks_tablicy = indeks_tablicy;
+    }
     
     public void wprowadzDane(){
-        student[Main.i][0]=this.imie;
-        student[Main.i][1]=this.imie;
-        student[Main.i][2]=this.imie;
-        student[Main.i][3]=this.imie;
-        student[Main.i][4]=this.imie;
+        student[this.indeks_tablicy][0]=this.imie;
+        student[this.indeks_tablicy][1]=this.imie;
+        student[this.indeks_tablicy][2]=this.imie;
+        student[this.indeks_tablicy][3]=this.imie;
+        student[this.indeks_tablicy][4]=this.imie;
     }
 }
 

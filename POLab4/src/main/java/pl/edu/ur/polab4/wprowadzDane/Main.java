@@ -8,7 +8,7 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int c,i;
+        int c, i;
         String imie, nazwisko, nazwa_specjalnosci, rok_studiow;
         int nr_indeksu;
         Scanner scanner = new Scanner(System.in);
@@ -35,7 +35,8 @@ public class Main {
                 nazwa_specjalnosci=scanner.next();
                 rok_studiow=scanner.next();
                 Student student = new Student(imie, nazwisko, nr_indeksu, nazwa_specjalnosci, rok_studiow);
-                Tab.wprowadzDane();
+                Tab tab = new Tab(i);
+                tab.wprowadzDane();
                 break;
 
               case 2:
